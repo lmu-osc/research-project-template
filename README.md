@@ -1,6 +1,6 @@
 # Research Project Template
 
-This repository serves as a robust template for organizing and managing research projects, from data acquisition to manuscript preparation and presentation. 
+This repository serves as a template for organizing and managing research projects, from data acquisition to manuscript preparation and presentation. 
 
 ## Getting Started
 
@@ -18,16 +18,30 @@ To begin a new project using this template, follow these steps:
 
 2. Clone your new repository:
 
-```bash
-git clone https://github.com/your-username/your-new-repository-name.git
-cd your-new-repository-name
-```
+    If you followed the OSC tutorials, see [this guide](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/clone.html) for cloning via SSH within RStudio.
 
-3. Customize the README:
+    As a general steo, you can clone the repository using either SSH or HTTPS in the command line as follows (please use one of the following methods):
+
+    - **Using SSH**:
+        ```bash
+        git clone git@github.com:your-username/your-new-repository-name.git
+        ```
+
+    OR
+    
+    - **Using HTTPS**:
+        ```bash
+        git clone https://github.com/your-username/your-new-repository-name.git
+        ```
+
+    > **Note:**   `cd` is a command-line instruction used to change the current working directory, equivalent to double-clicking the folder in a file explorer.
+    
+
+3. Customize the README and adapt the directory structure to fit your project's needs:
 
     - Update this top-level README.md with a concise project title, description, and any initial setup instructions specific to your project.
-
-    - Populate the README.md files within each subdirectory with relevant details as your project progresses.
+    - Populate the `README.md` files within each subdirectory with relevant details as your project progresses. You can find a detailed guide on how to write a markdown file [here](https://www.markdownguide.org/basic-syntax/). 
+    - Delete the example scripts and files from the template, such as `01_data/raw/example_data.csv`, `'02_analysis/01_data_cleaning.R`, etc., and replace them with your own data and scripts, as needed.
 
 ## Directory Structure
 
@@ -72,7 +86,11 @@ Below is an overview of the repository layout:
     - Comment code to explain critical steps and assumptions.
 
 - **Sensitive Information**:  
-    - Never commit sensitive data or API keys to the repository.
+    - Never commit sensitive data (credentials, API keys, personal info) to repositories
+    - Add sensitive files to `.gitignore` before initial commits
+    - Use environment variables or secrets management tools
+    - Create template files (e.g., `.env.example`) showing required variable names
+    - For sensitive datasets, document access procedures rather than including the data
 
 - **Large Files**:  
     - Avoid committing very large files directly to Git. Use [Git LFS](https://git-lfs.github.com/), [git-annex](https://git-annex.branchable.com/), or research-specific tools such as [DataLad](https://www.datalad.org/) for managing large datasets or files, if appropriate for your workflow.
