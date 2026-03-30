@@ -18,6 +18,10 @@ To begin a new project using this template, follow these steps:
 
 2. Clone your new repository:
 
+If using RStudio, create a new RStudio project and paste e.g. the SSH URL of your GitHub repository when prompted (see [Github tutorial](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/clone.html)).
+
+If using the command line, you can type e.g. (if using a HTTPS connection):
+
 ```bash
 git clone https://github.com/your-username/your-new-repository-name.git
 cd your-new-repository-name
